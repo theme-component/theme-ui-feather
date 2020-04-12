@@ -1,42 +1,50 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import React from "react"
+import { Link as GatsbyLink } from 'gatsby'
+import { Flex, Text, Box, Link } from 'theme-ui'
+import { GitHub } from 'theme-ui-feather';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+const Header = () => (
+  <Flex
+    as="header"
+    sx={{
+      px: 4,
+      py: 3,
+      justifyContent: "space-between",
+      alignItems: 'center',
+      borderBottom: '1px solid',
+      borderColor: '#F5F5F5'
     }}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+    <Box>
+      <Text>
+        Based on 
+        <Link href="https://feathericons.com/" ml={1} variant="nav">
+          Feather
         </Link>
-      </h1>
-    </div>
-  </header>
+      </Text>    
+    </Box>
+    <Box>
+      <GatsbyLink sx={{...linkCSS, mx: 2}}>
+        Icons
+      </GatsbyLink>
+      <GatsbyLink sx={{...linkCSS, mx: 2}}>
+        Docs
+      </GatsbyLink>
+      <Link href="https://feathericons.com/" variant="nav" mx="2">
+        GitHub 
+      </Link>
+    </Box>
+  </Flex>
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+const linkCSS = {
+  color: 'inherit',
+  textDecoration: 'none',
+  '&:hover':{
+    textDecoration: 'underline',
+  }
 }
 
 export default Header
