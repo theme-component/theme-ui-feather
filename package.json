@@ -1,0 +1,20 @@
+{
+  "name": "root",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^3.20.2",
+    "microbundle": "^0.11.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "scripts": {
+    "build": "lerna run build --stream"
+  },
+  "dependencies": {
+    "theme-ui": "^0.3.1"
+  }
+}

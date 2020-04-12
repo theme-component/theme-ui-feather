@@ -1,0 +1,34 @@
+{
+  "name": "theme-ui-feather",
+  "version": "0.0.1",
+  "description": "Theme UI component for Feather icons",
+  "source": "src/index.js",
+  "main": "build/index.js",
+  "module": "dist/index.js",
+  "sideEffects": false,
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "microbundle --no-compress --jsx React.createElement"
+  },
+  "keywords": [
+    "react",
+    "icons",
+    "svg",
+    "feather",
+    "design",
+    "theme-ui"
+  ],
+  "author": "Julian Furchert",
+  "license": "MIT",
+  "peerDependencies": {
+    "@theme-ui/components": "^0.3.1"
+  },
+  "devDependencies": {
+    "@theme-ui/components": "^0.3.1",
+    "@types/theme-ui__components": "^0.2.3",
+    "feather-icons": "^4.22.1",
+    "microbundle": "^0.11.0",
+    "prettier-eslint": "^9.0.0",
+    "uppercamelcase": "^3.0.0"
+  }
+}
