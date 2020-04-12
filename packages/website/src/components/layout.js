@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
       <Box as="footer" sx={{ px: 4, py: 4 }}>
         © {new Date().getFullYear()}, Built with
         {` `}
-        <Link variant="nav" href="https://www.gatsbyjs.org">Gatsby</Link>
+        <Link target="_blank" variant="nav" href="https://www.gatsbyjs.org">Gatsby</Link>
       </Box>
     </Flex>
   )

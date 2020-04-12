@@ -20,19 +20,19 @@ const Header = () => (
     <Box>
       <Text>
         Based on 
-        <Link href="https://feathericons.com/" ml={1} variant="nav">
+        <Link target="_blank" href="https://feathericons.com/" ml={1} variant="nav">
           Feather
         </Link>
       </Text>    
     </Box>
     <Box>
-      <GatsbyLink sx={{...linkCSS, mx: 2}}>
+      <GatsbyLink to="/" sx={{...linkCSS, mx: 2}}>
         Icons
       </GatsbyLink>
-      <GatsbyLink sx={{...linkCSS, mx: 2}}>
+      <Link target="_blank" href="https://github.com/theme-component/theme-ui-feather" variant="nav" mx="2">
         Docs
-      </GatsbyLink>
-      <Link href="https://feathericons.com/" variant="nav" mx="2">
+      </Link>
+      <Link target="_blank" href="https://github.com/theme-component/theme-ui-feather" variant="nav" mx="2">
         GitHub 
       </Link>
     </Box>
