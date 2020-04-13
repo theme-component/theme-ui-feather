@@ -3,6 +3,7 @@ import { Input, Box, Text, Flex, Grid, AspectRatio } from 'theme-ui'
 import * as featherIcons from 'theme-ui-feather';
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Iconbox from "../components/iconbox"
 
 const IndexPage = () => {
   // const [value, setValue] = useState("Test");
@@ -31,57 +32,16 @@ const IndexPage = () => {
       <Box sx={{width: '100%', px: 4}} >
         <Grid width={200} gap={2}>
           {Object.keys(featherIcons).map(key => (
-            <Box
-              tabIndex={0}
-              role="button"
-              sx={{
-                p: 4,
-                cursor: 'pointer',
-                bg: '#F5F5F5',
-                color: 'black',
-                '&:hover':{
-                  bg: '#90FF34'
-                },
-                '&:focus':{
-                  boxShadow: '0 0 0 3px rgba(144, 255, 52, 1)',
+            <Iconbox
+              name={key}
+              icon={
+                React.createElement( featherIcons[key],{
+                  sx:{color: "black"},
+                  strokeWidth: 2,
+                  size: 50
                 }
-              }}
-            >
-              <AspectRatio 
-                ratio={1}
-                sx={{ 
-                  width: '100%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  flexDirection: 'column',
-                  justifyContent: 'space-between'
-                }}>
-                <Flex
-                  sx={{
-                    flexGrow: 1,
-                    justifyContent: 'center',
-                    alignItems: 'center'
-                  }}
-                >
-                  {React.createElement( featherIcons[key],{
-                    sx:{color: "black"},
-                    strokeWidth: 1,
-                    size: 50
-                  })}
-                </Flex>
-                <Text
-                  as="p"
-                  sx={{
-                    borderRadius: 1000,
-                    fontSize: 14,
-                    py: 1,
-                    px: 3,
-                  }}
-                >
-                  {key}
-                </Text>
-              </AspectRatio>
-            </Box>
+              )}
+            /> 
           ))}
         </Grid>
       </Box>

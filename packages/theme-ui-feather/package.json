@@ -21,7 +21,8 @@
   "author": "Julian Furchert",
   "license": "MIT",
   "peerDependencies": {
-    "@theme-ui/components": "^0.3.1"
+    "@theme-ui/components": "^0.3.1",
+    "react": "^16.13.1"
   },
   "devDependencies": {
     "@theme-ui/components": "^0.3.1",
@@ -29,6 +30,7 @@
     "feather-icons": "^4.22.1",
     "microbundle": "^0.11.0",
     "prettier-eslint": "^9.0.0",
+    "react": "^16.13.1",
     "uppercamelcase": "^3.0.0"
   }
 }
