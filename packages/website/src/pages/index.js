@@ -1,15 +1,14 @@
 import React, { useState } from "react"
-import { Input, Box, Text, Flex, Grid, AspectRatio } from 'theme-ui'
-import * as featherIcons from 'theme-ui-feather';
+import { Input, Box, Text, Flex } from 'theme-ui'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Iconbox from "../components/iconbox"
+import IconGrid from "../components/icon-grid"
 
 const IndexPage = () => {
-  // const [value, setValue] = useState("Test");
+  const [value, setValue] = useState("Test");
 
   const handleChange = (event) => {
-    // setValue(event.target.value);
+    setValue(event.target.value);
   }
 
   return(
@@ -27,23 +26,14 @@ const IndexPage = () => {
         <Text sx={{fontSize: 40, mt: 80}}>
           Theme UI Feather
         </Text>
-        <Input  placeholder="Search icons..." />
+        <Input 
+          value={value} 
+          onChange={handleChange} 
+          placeholder="Search icons..." 
+        />
       </Flex>
       <Box sx={{width: '100%', px: 4}} >
-        <Grid width={200} gap={2}>
-          {Object.keys(featherIcons).map(key => (
-            <Iconbox
-              name={key}
-              icon={
-                React.createElement( featherIcons[key],{
-                  sx:{color: "black"},
-                  strokeWidth: 2,
-                  size: 50
-                }
-              )}
-            /> 
-          ))}
-        </Grid>
+        <IconGrid />
       </Box>
     </Layout>
   )

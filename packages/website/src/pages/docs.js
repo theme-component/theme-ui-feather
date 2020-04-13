@@ -1,5 +1,5 @@
 import React from "react"
-import { Input, Box, Text, Flex, Grid, AspectRatio } from 'theme-ui'
+import { Text, Flex } from 'theme-ui'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
